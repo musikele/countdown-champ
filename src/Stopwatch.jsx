@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import './App.css'
-import Clock from './Clock'
+import StopwatchClock from './StopwatchClock'
 import { Form, FormControl, Button } from 'react-bootstrap'
 
-class App extends Component {
+class Stopwatch extends Component {
   //add a state to a component
   constructor(props) {
     super(props)
     this.state = {
-      deadline: 'December 25, 2017'
+      deadline: '100'
     }
   }
 
@@ -25,9 +25,9 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-title">
-          Countdown to {this.state.deadline}
+          Countdown from {this.state.deadline}
         </div>
-        <Clock deadline={this.state.deadline} />
+        <StopwatchClock deadline={this.state.deadline} />
         <div>
           <Form
             inline
@@ -52,4 +52,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default Stopwatch
